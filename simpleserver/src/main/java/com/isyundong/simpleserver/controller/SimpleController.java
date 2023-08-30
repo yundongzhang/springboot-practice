@@ -1,9 +1,8 @@
 package com.isyundong.simpleserver.controller;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.isyundong.simpleserver.dto.UserInfoDTO;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -14,6 +13,11 @@ public class SimpleController {
     @GetMapping("/getId")
     public String getId() {
         return UUID.randomUUID().toString();
+    }
+
+    @PostMapping("/getUserInfo")
+    public UserInfoDTO getUserInfo(@RequestBody UserInfoDTO uInfo) {
+        return new UserInfoDTO(uInfo.getuId(), "张三");
     }
 
 }

@@ -1,6 +1,5 @@
 package com.isyundong.httpexchange.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.isyundong.httpexchange.exchange.SimpleExchange;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
